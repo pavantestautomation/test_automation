@@ -1,0 +1,29 @@
+{
+    "default": {
+        "parallel": 1,
+        "format": [
+            "summary",
+            "html:output/cucumber-report/index.html",
+            "@cucumber/pretty-formatter"
+        ],
+        "formatOptions": {
+            "colorsEnabled": true
+        },
+        "paths": [
+            "features/**/*.feature"
+        ],
+        "requireModule": [
+            "ts-node/register"
+        ],
+        "require": [
+            "./src/stepdefs/**/*.ts",
+            "./src/context/*.ts"
+        ],
+        "tags": "not @ignore",
+        "worldParameters": {
+            "browser": "chrome"
+        },
+        "retry": 0,
+        "publishQuiet": true
+    }
+}
