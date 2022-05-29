@@ -1,7 +1,6 @@
 {
   "compileOnSave": true,
   "compilerOptions": {
-    "baseUrl": "src",
     "rootDir": "src",
     "outDir": "build",
     "module": "CommonJS",
@@ -18,11 +17,13 @@
       "node"
     ],
     "allowJs": true,
+    "importHelpers": true
   },
   "exclude": [
     "node_modules"
   ],
   "include": [
-    "src/**/*.ts"
+    "src/**/*.ts",
+    "Reporter.ts"
   ]
 }

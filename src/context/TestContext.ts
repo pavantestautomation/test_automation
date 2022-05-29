@@ -1,7 +1,7 @@
 import { World, setWorldConstructor, IWorldOptions } from '@cucumber/cucumber';
+import Pages from '../pages/Pages';
 import RestClient from "../core/api/RestClient";
 import UiClient from '../core/ui/UiClient';
-import Pages from '../pages/Pages';
 
 export default class TestContext extends World {
 
@@ -11,7 +11,6 @@ export default class TestContext extends World {
 
     constructor(options: IWorldOptions) {
         super(options);
-
         this._uiClient = new UiClient();
         this._restClient = new RestClient();
     }

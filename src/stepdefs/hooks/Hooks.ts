@@ -5,20 +5,17 @@ import TestContext from '../../context/TestContext';
 setDefaultTimeout(60000);
 
 
-Before('@ui', async function (this: TestContext) {
-    await this.UiClient.init('chrome');
+Before('@ui', async function (this: TestContext, scenario) {
+    await this.UiClient.init('chrome', scenario.pickle.name);
 });
 
 Before('@api', async function (this: TestContext) {
     await this.restClient.initRestClient(Environment.getApiConfig);
 });
 
-After('@ui', async function (this: TestContext) {
-    await this.UiClient.close();
-});
-
 AfterStep('@ui', async function (this: TestContext, scenario) {
     if (scenario.result.status === 'FAILED') {
         this.attach(await this.UiClient.screenshot(), 'base64:image/png');
+        await this.UiClient.close();
     }
 });

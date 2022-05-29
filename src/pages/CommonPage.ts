@@ -8,11 +8,11 @@ export default class CommonPage {
     }
 
     async goTo(path: string) {
-        await this._page.goto(path, { waitUntil: "networkidle" });
+        await this._page.goto(path);
         await this.acceptCookie();
     }
 
-    async acceptCookie() {
+    private async acceptCookie() {
         await this._page.click('text=Got it');
     }
 

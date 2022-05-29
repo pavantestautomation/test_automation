@@ -8,7 +8,6 @@ export default class RestClient {
 
     async initRestClient(config: ApiConfig) {
         this.apiContext = await request.newContext({ ignoreHTTPSErrors: true, baseURL: config.baseUrl });
-
     }
 
     async get(endPoint: string, queryParams?: Record<string, string | number | boolean>) {

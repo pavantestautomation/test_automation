@@ -1,4 +1,4 @@
-@ui
+@ui @ignore
 Feature: Test mail one menu bar section
     Verfies mail one menu bar basic functionality.
 

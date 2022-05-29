@@ -1,3 +1,5 @@
+import fs from 'fs/promises';
+
 interface UiConfig {
     baseUrl: string,
     timeout: number
@@ -25,7 +27,12 @@ class Environment {
     }
 
     public get getApiConfig(): ApiConfig {
+
         return this['dev'].apiConfig;
+    }
+
+    public async convertVideoToBase64(filePath: string) {
+        return await fs.readFile(filePath, { encoding: "base64" });
     }
 
 }

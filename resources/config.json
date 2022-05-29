@@ -3,7 +3,7 @@
         "parallel": 1,
         "format": [
             "summary",
-            "html:output/cucumber-report/index.html",
+            "json:output/cucumber-report/output.json",
             "@cucumber/pretty-formatter"
         ],
         "formatOptions": {
