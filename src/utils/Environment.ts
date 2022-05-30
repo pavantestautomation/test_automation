@@ -18,7 +18,7 @@ interface EnvironmentDetails {
 class Environment {
 
     private dev: EnvironmentDetails = {
-        uiConfig: { baseUrl: 'https://www.dailymail.co.uk/', timeout: 60000 },
+        uiConfig: { baseUrl: 'https://www.dailymail.co.uk/', timeout: 180000 },
         apiConfig: { baseUrl: 'https://reqbin.com/', defaultHeaders: { Accept: '*' } }
     };
 

@@ -2,7 +2,7 @@ import { Before, After, setDefaultTimeout, AfterStep } from '@cucumber/cucumber'
 import Environment from '../../utils/Environment';
 import TestContext from '../../context/TestContext';
 
-setDefaultTimeout(60000);
+setDefaultTimeout(180000);
 
 
 Before('@ui', async function (this: TestContext, scenario) {

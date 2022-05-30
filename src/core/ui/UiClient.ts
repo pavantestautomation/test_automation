@@ -5,7 +5,7 @@ export default class UiClient {
     private _page: Page;
 
     async init(browserName: string, scenarioName?: string) {
-        const Browser = await chromium.launch({ headless: true, channel: browserName });
+        const Browser = await chromium.launch({ headless: false, channel: browserName });
         const context = await Browser.newContext({
             baseURL: Environment.getUiConfig.baseUrl, viewport: { height: 1060, width: 1920 }
         });

@@ -11,6 +11,12 @@ When('user navigate to news page', async function (this: TestContext) {
     await this.oneMail.newsPage.navigateTo();
 });
 
+Then('maximize and minimizing first video', async function (this: TestContext) {
+    await this.oneMail.sportsPage.clickFirstLink();
+    await this.oneMail.sportsPage.maximizeButton();
+    await this.oneMail.sportsPage.minimizeButton();
+});
+
 When('user navigate to sports page', async function (this: TestContext) {
     await this.oneMail.sportsPage.navigateTo();
 });
