@@ -1,7 +1,7 @@
 {
   "name": "test_automation",
   "version": "1.0.0",
-  "description": "",
+  "description": "Test Automation Project",
   "main": "index.js",
   "scripts": {
     "build": "npm install",
@@ -9,7 +9,11 @@
     "test": "cucumber-js -c resources/config.json & echo .",
     "posttest": "npx ts-node src/utils/Reporter.ts"
   },
-  "keywords": [],
+  "keywords": [
+    "E2E",
+    "UI-Test",
+    "API-Test"
+  ],
   "author": "Basker Subramaniyan",
   "license": "ISC",
   "devDependencies": {
@@ -22,6 +26,8 @@
     "ts-node": "10.8.0",
     "mkdirp": "1.0.4",
     "rimraf": "3.0.2",
-    "multiple-cucumber-html-reporter": "1.21.1"
+    "multiple-cucumber-html-reporter": "1.21.1",
+    "tsconfig-paths": "4.0.0"
   }
+
 }

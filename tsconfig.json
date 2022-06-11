@@ -2,9 +2,14 @@
   "compileOnSave": true,
   "compilerOptions": {
     "rootDir": "src",
+    "noImplicitAny": true,
+    "experimentalDecorators": true,
     "outDir": "build",
     "module": "CommonJS",
     "target": "ESNext",
+    "lib": [
+      "ESNext"
+    ],
     "sourceMap": true,
     "strictPropertyInitialization": false,
     "resolveJsonModule": true,
@@ -13,11 +18,30 @@
     "allowSyntheticDefaultImports": true,
     "skipLibCheck": true,
     "watch": true,
+    "pretty": true,
     "types": [
       "node"
     ],
     "allowJs": true,
-    "importHelpers": true
+    "importHelpers": true,
+    "baseUrl": "src",
+    "paths": {
+      "@utils/*": [
+        "./utils/*"
+      ],
+      "testContext": [
+        "./context/TestContext"
+      ],
+      "restClient": [
+        "./core/api/RestClient"
+      ],
+      "uiClient": [
+        "./core/ui/UiClient"
+      ],
+      "@onemail/*": [
+        "./pages/one_mail/*"
+      ]
+    }
   },
   "exclude": [
     "node_modules"
@@ -25,5 +49,12 @@
   "include": [
     "src/**/*.ts",
     "Reporter.ts"
-  ]
+  ],
+  "ts-node": {
+    "require": [
+      "tsconfig-paths/register"
+    ],
+    "files": true,
+    "transpileOnly": true
+  }
 }

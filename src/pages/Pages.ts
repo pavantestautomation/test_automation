@@ -1,7 +1,7 @@
 import { Page } from "playwright";
-import Homepage from "./Homepage";
-import NewsPage from "./NewsPage";
-import SportsPage from "./SportsPage";
+import Homepage from "@onemail/Homepage";
+import NewsPage from "@onemail/NewsPage";
+import SportsPage from "@onemail/SportsPage";
 
 export default class Pages {
     private _page: Page;

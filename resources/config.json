@@ -21,7 +21,8 @@
         ],
         "tags": "not @ignore",
         "worldParameters": {
-            "browser": "chrome"
+            "browser": "chrome",
+            "headless": true
         },
         "retry": 0,
         "publishQuiet": true

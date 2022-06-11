@@ -1,7 +1,7 @@
 import { World, setWorldConstructor, IWorldOptions } from '@cucumber/cucumber';
 import Pages from '../pages/Pages';
-import RestClient from "../core/api/RestClient";
-import UiClient from '../core/ui/UiClient';
+import RestClient from 'restClient'
+import UiClient from 'uiClient';
 
 export default class TestContext extends World {
 

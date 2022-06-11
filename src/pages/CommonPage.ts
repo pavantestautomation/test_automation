@@ -1,10 +1,8 @@
 import { Page } from "playwright";
 
 export default class CommonPage {
-    private _page: Page;
 
-    constructor(page: Page) {
-        this._page = page;
+    constructor(protected _page: Page) {
     }
 
     async goTo(path: string) {
@@ -16,7 +14,4 @@ export default class CommonPage {
         await this._page.click('text=Got it');
     }
 
-    get page() {
-        return this._page;
-    }
 }

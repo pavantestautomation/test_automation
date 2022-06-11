@@ -1,4 +1,4 @@
-import CommonPage from "./CommonPage";
+import CommonPage from "../CommonPage";
 
 export default class Homepage extends CommonPage {
 

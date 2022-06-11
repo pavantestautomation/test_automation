@@ -1,9 +1,8 @@
-import { Before, After, setDefaultTimeout, AfterStep } from '@cucumber/cucumber';
-import Environment from '../../utils/Environment';
-import TestContext from '../../context/TestContext';
+import { Before, setDefaultTimeout, AfterStep } from '@cucumber/cucumber';
+import Environment from '@utils/Environment';
+import TestContext from 'testContext';
 
 setDefaultTimeout(180000);
-
 
 Before('@ui', async function (this: TestContext, scenario) {
     await this.UiClient.init('chrome', scenario.pickle.name);
