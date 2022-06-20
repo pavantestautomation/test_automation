@@ -1,5 +1,4 @@
 import { Page } from 'playwright';
-
 export default class CommonPage {
   constructor(protected page: Page) {
     console.log('Page initialization');

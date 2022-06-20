@@ -32,6 +32,7 @@
     "vsicons.presets.tsOfficial": true,
     "workbench.colorTheme": "Default Dark+",
     "prettier.arrowParens": "always",
+    "prettier.endOfLine": "auto",
     "prettier.bracketSpacing": true,
     "prettier.enable": true,
     "prettier.singleQuote": true,

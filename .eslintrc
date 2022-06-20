@@ -23,8 +23,13 @@
     ],
     "rules": {
         "prettier/prettier": "off",
+        "eqeqeq": "error",
+        "no-else-return": "error",
+        "no-unused-expressions": "error",
+        "arrow-spacing": "error",
+        "comma-spacing": "error",
+        "getter-return": "error",
         "arrow-parens": "error",
-        "camelcase": "error",
         "sort-imports": "error",
         "no-multi-spaces": "error",
         "no-extra-semi": "error",
@@ -70,6 +75,7 @@
                 "selector": "objectLiteralProperty",
                 "format": null
             }
-        ]
+        ],
+        "@typescript-eslint/no-unused-vars": "error"
     }
 }
