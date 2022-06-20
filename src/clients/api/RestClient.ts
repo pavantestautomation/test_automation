@@ -9,13 +9,13 @@ export default class RestClient {
   async initRestClient(config: ApiConfig) {
     this.apiContext = await request.newContext({
       ignoreHTTPSErrors: true,
-      baseURL: config.baseUrl
+      baseURL: config.baseUrl,
     });
   }
 
   async get(endPoint: string, queryParams?: Record<string, string | number | boolean>) {
     this._lastResponse = await this.apiContext.get(`.${endPoint}`, {
-      params: queryParams
+      params: queryParams,
     });
     console.log(await this._lastResponse.json());
   }
@@ -23,7 +23,7 @@ export default class RestClient {
   async post(endPoint: string, data: unknown, queryParams?: Record<string, string | number | boolean>) {
     this._lastResponse = await this.apiContext.post(`.${endPoint}`, {
       data: data,
-      params: queryParams
+      params: queryParams,
     });
   }
 

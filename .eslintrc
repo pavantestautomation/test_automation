@@ -18,9 +18,53 @@
         "ecmaVersion": "latest"
     },
     "rules": {
-        "prettier/prettier": "error",
+        "prettier/prettier": "off",
         "arrow-parens": "error",
         "camelcase": "error",
-        "sort-imports": "error"
+        "sort-imports": "error",
+        "no-multi-spaces": "error",
+        "no-extra-semi": "error",
+        "semi": "error",
+        "no-multiple-empty-lines": "error",
+        "require-await": "error",
+        "no-empty-function": "error",
+        "@typescript-eslint/quotes": [
+            "error",
+            "single"
+        ],
+        "@typescript-eslint/naming-convention": [
+            "error",
+            {
+                "selector": [
+                    "variableLike"
+                ],
+                "format": [
+                    "camelCase"
+                ]
+            },
+            {
+                "selector": [
+                    "variable"
+                ],
+                "types": [
+                    "boolean"
+                ],
+                "format": [
+                    "camelCase"
+                ],
+                "prefix": [
+                    "is",
+                    "has"
+                ]
+            },
+            {
+                "selector": [
+                    "typelike"
+                ],
+                "format": [
+                    "strictPascalCase"
+                ]
+            }
+        ]
     }
 }

@@ -28,11 +28,11 @@ class Environment {
     return this['dev'].uiConfig;
   }
 
-  public get getApiConfig(): ApiConfig {
+  get getApiConfig(): ApiConfig {
     return this['dev'].apiConfig;
   }
 
-  public async convertVideoToBase64(filePath: string) {
+  async convertVideoToBase64(filePath: string) {
     return await fs.readFile(filePath, { encoding: 'base64' });
   }
 }

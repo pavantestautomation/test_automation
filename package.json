@@ -7,7 +7,6 @@
     "build": "npm install",
     "lint": "eslint . --ext .ts",
     "eslint-fix": "eslint . --ext .ts --fix",
-    "format": "prettier --config .prettierrc ./src/**/*.ts --write",
     "pretest": "rimraf output && mkdirp output/cucumber-report/",
     "test": "cucumber-js -c resources/config.json"
   },
