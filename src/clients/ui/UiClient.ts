@@ -21,7 +21,7 @@ export default class UiClient {
   }
 
   async close() {
-    await this.page.context().browser().close();
+    await this.page.context().close();
   }
 
   async screenshot() {

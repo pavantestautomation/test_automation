@@ -1,6 +1,6 @@
 {
     "default": {
-        "parallel": 1,
+        "parallel": 2,
         "format": [
             "summary",
             "json:output/cucumber-report/output.json",

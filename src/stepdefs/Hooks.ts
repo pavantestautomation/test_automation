@@ -4,12 +4,18 @@ import TestContext from 'testContext';
 
 setDefaultTimeout(180000);
 
+Before(function (this: TestContext) {
+  global.testContext = this as TestContext;
+});
+
 Before('@ui', async function (this: TestContext) {
   await this.UiClient.init('chrome');
+  global.oneMail = this.oneMail;
 });
 
 Before('@api', async function (this: TestContext) {
   await this.restClient.initRestClient(Environment.getApiConfig);
+  global.restClient = this.restClient;
 });
 
 AfterStep('@ui', async function (this: TestContext, scenario) {
