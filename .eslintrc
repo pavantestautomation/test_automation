@@ -1,6 +1,12 @@
 {
     "root": true,
     "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module",
+        "project": "tsconfig.json",
+        "include": "./src/**/*.ts"
+    },
     "plugins": [
         "@typescript-eslint",
         "prettier"
@@ -12,11 +18,9 @@
         "prettier"
     ],
     "ignorePatterns": [
-        "node_modules"
+        "node_modules",
+        "src/context/TestContext.ts"
     ],
-    "parserOptions": {
-        "ecmaVersion": "latest"
-    },
     "rules": {
         "prettier/prettier": "off",
         "arrow-parens": "error",
@@ -32,11 +36,16 @@
             "error",
             "single"
         ],
+        "@typescript-eslint/member-ordering": [
+            "error"
+        ],
         "@typescript-eslint/naming-convention": [
             "error",
             {
                 "selector": [
-                    "variableLike"
+                    "variableLike",
+                    "method",
+                    "memberLike"
                 ],
                 "format": [
                     "camelCase"
@@ -44,26 +53,22 @@
             },
             {
                 "selector": [
-                    "variable"
-                ],
-                "types": [
-                    "boolean"
+                    "property"
                 ],
                 "format": [
                     "camelCase"
                 ],
-                "prefix": [
-                    "is",
-                    "has"
+                "leadingUnderscore": "allow"
+            },
+            {
+                "selector": "typeLike",
+                "format": [
+                    "PascalCase"
                 ]
             },
             {
-                "selector": [
-                    "typelike"
-                ],
-                "format": [
-                    "strictPascalCase"
-                ]
+                "selector": "objectLiteralProperty",
+                "format": null
             }
         ]
     }

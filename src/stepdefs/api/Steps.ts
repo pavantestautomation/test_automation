@@ -2,7 +2,7 @@ import { Given, Then, When } from '@cucumber/cucumber';
 import TestContext from 'testContext';
 import { expect } from '@playwright/test';
 
-Given('the rest api', async function (this: TestContext, doc: string) {
+Given('the rest api', function (this: TestContext, doc: string) {
   console.log('Doc' + doc);
 });
 

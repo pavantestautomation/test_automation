@@ -6,6 +6,10 @@ export default class RestClient {
   private apiContext: APIRequestContext;
   private _lastResponse: APIResponse;
 
+  get lastResponse() {
+    return this._lastResponse;
+  }
+
   async initRestClient(config: ApiConfig) {
     this.apiContext = await request.newContext({
       ignoreHTTPSErrors: true,
@@ -25,9 +29,5 @@ export default class RestClient {
       data: data,
       params: queryParams,
     });
-  }
-
-  get lastResponse() {
-    return this._lastResponse;
   }
 }

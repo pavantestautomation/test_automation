@@ -24,7 +24,7 @@
     ],
     "allowJs": true,
     "importHelpers": true,
-    "baseUrl": "src",
+    "baseUrl": "./src",
     "paths": {
       "@utils/*": [
         "./utils/*"
@@ -33,10 +33,13 @@
         "./context/TestContext"
       ],
       "restClient": [
-        "./core/api/RestClient"
+        "./clients/api/RestClient"
       ],
       "uiClient": [
-        "./core/ui/UiClient"
+        "./clients/ui/UiClient"
+      ],
+      "pages": [
+        "./pages/Pages"
       ],
       "@onemail/*": [
         "./pages/one_mail/*"

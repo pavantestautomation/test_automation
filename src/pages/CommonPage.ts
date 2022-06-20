@@ -1,14 +1,16 @@
 import { Page } from 'playwright';
 
 export default class CommonPage {
-  constructor(protected _page: Page) {}
+  constructor(protected page: Page) {
+    console.log('Page initialization');
+  }
 
   async goTo(path: string) {
-    await this._page.goto(path);
+    await this.page.goto(path);
     await this.acceptCookie();
   }
 
   private async acceptCookie() {
-    await this._page.click('text=Got it');
+    await this.page.click('text=Got it');
   }
 }

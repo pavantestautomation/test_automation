@@ -30,7 +30,7 @@
     },
     "typescript.inlayHints.parameterTypes.enabled": true,
     "vsicons.presets.tsOfficial": true,
-    "workbench.colorTheme": "Visual Studio Dark",
+    "workbench.colorTheme": "Default Dark+",
     "prettier.arrowParens": "always",
     "prettier.bracketSpacing": true,
     "prettier.enable": true,

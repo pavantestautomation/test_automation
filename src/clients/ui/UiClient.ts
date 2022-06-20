@@ -4,6 +4,9 @@ import Environment from '@utils/Environment';
 export default class UiClient {
   private _page: Page;
 
+  get page(): Page {
+    return this._page;
+  }
   async init(browserName: string) {
     const browser = await chromium.launch({
       headless: false,
@@ -19,10 +22,6 @@ export default class UiClient {
 
   async close() {
     await this.page.context().browser().close();
-  }
-
-  get page(): Page {
-    return this._page;
   }
 
   async screenshot() {
