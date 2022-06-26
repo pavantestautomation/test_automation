@@ -3,13 +3,10 @@
         "parallel": 2,
         "format": [
             "summary",
+            "progress-bar",
             "json:output/cucumber-report/output.json",
-            "html:output/cucumber-report/index.html",
-            "@cucumber/pretty-formatter"
+            "html:output/cucumber-report/index.html"
         ],
-        "formatOptions": {
-            "colorsEnabled": true
-        },
         "paths": [
             "features/**/*.feature"
         ],
@@ -26,6 +23,6 @@
             "headless": true
         },
         "retry": 0,
-        "publishQuiet": true
+        "publishQuiet": false
     }
 }
